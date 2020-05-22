@@ -1,9 +1,18 @@
 <template>
-  <div class="container">
-    <div class="container-content">
-      <div v-for="(item, index) in articleData" :key="index" class="cont-card"></div>
+  <div class="home-content">
+    <div class="container">
+      <div class="container-content">
+        <div v-for="(item, index) in articleData" :key="index" class="cont-card">
+          <a href>
+            <h2>
+              <font color="#EE0000">[置顶]</font>
+              我是标题{{index}}
+            </h2>
+          </a>
+        </div>
+      </div>
+      <div class="container-label"></div>
     </div>
-    <div class="container-label"></div>
   </div>
 </template>
 
@@ -19,6 +28,12 @@ export default {
 </script>
 
 <style scoped>
+.home-content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding-top: 30px;
+}
 
 .container {
   width: 70%;
@@ -38,16 +53,28 @@ export default {
 .container-content .cont-card {
   width: 100%;
   height: 200px;
-  background-color: #fff;
   margin-bottom: 30px;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(156, 156, 156);
+}
+
+.container-content .cont-card a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.container-content .cont-card a h2 {
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .container .container-label {
   width: 25%;
-  height: 500px;
-  background-color: #fff;
-  border-radius: 5px
+  background-color: #434343;
+  border-radius: 5px;
 }
-
 </style>

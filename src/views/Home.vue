@@ -15,7 +15,7 @@
 <script>
 // @ is an alias to /src
 import HomeHeader from '@/components/HomeAss/HomeHeader.vue'
-import HomeContent from './../components/HomeAss/HomeContent'
+import HomeContent from './../components/HomeAss/HomeContent.vue'
 
 export default {
   name: 'Home',

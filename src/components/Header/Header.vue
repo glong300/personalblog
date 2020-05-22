@@ -6,17 +6,14 @@
         <router-link to="/index">
           <i class="link-icon"></i>首页
         </router-link>
-        <router-link to="/labels">
-          <i class="link-icon"></i>标签
-        </router-link>
-        <router-link to="/classification">
-          <i class="link-icon"></i>分类
-        </router-link>
-        <router-link to="/about">
-          <i class="link-icon"></i>关于我
+        <router-link to="/archive">
+          <i class="link-icon"></i>目录
         </router-link>
         <router-link to="/mybooklist">
           <i class="link-icon"></i>我的书单
+        </router-link>
+        <router-link to="/about">
+          <i class="link-icon"></i>关于我
         </router-link>
       </div>
     </div>

@@ -13,7 +13,23 @@ const routes = [{
     name: 'Home',
     component: Home,
     meta: {
-      title: '标签归类'
+      title: '首页'
+    }
+  },
+  {
+    path: '/archive',
+    name: 'Archive',
+    component: () => import('../views/Archive.vue'),
+    meta: {
+      title: '目录'
+    }
+  },
+  {
+    path: '/mybooklist',
+    name: 'MyBookList',
+    component: () => import('../views/MyBookList.vue'),
+    meta: {
+      title: '我的书单'
     }
   },
   {
@@ -27,30 +43,6 @@ const routes = [{
       title: '关于我'
     }
   },
-  {
-    path: '/labels',
-    name: 'Labels',
-    component: () => import('../views/Labels.vue'),
-    meta: {
-      title: '标签归档'
-    }
-  },
-  {
-    path: '/classification',
-    name: 'Classification',
-    component: () => import('../views/Classification.vue'),
-    meta: {
-      title: '分类归档'
-    }
-  },
-  {
-    path: '/mybooklist',
-    name: 'MyBookList',
-    component: () => import('../views/MyBookList.vue'),
-    meta: {
-      title: '我的书单'
-    }
-  }
 ]
 
 const router = new VueRouter({

@@ -8,20 +8,24 @@
         <span>我是{{msg}}页面的副展位</span>
       </template>
     </HomeHeader>
+    <ArchiveCont />
   </div>
 </template>
 
 <script>
 import HomeHeader from './../components/HomeAss/HomeHeader'
+import ArchiveCont from './../components/ArchiveAss/ArchiveCont'
+
 export default {
-  name: 'Classification',
-  data () {
+  name: 'Archive',
+  data() {
     return {
-      msg: 'Classification'  
+      msg: 'Archive'
     }
   },
   components: {
-    HomeHeader
+    HomeHeader,
+    ArchiveCont
   }
 }
 </script>
