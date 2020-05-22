@@ -3,7 +3,7 @@
     <div class="nav-a">
       <img src="./../../assets/logo.png" alt @click="backHome" />
       <div class="nav-link">
-        <router-link to="/">
+        <router-link to="/index">
           <i class="link-icon"></i>首页
         </router-link>
         <router-link to="/labels">

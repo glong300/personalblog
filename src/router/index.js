@@ -6,10 +6,10 @@ Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    redirect: '/home'
+    redirect: '/index'
   },
   {
-    path: '/home',
+    path: '/index',
     name: 'Home',
     component: Home,
     meta: {

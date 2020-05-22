@@ -1,23 +1,20 @@
 <template>
   <div class="warpper">
     <div class="warpper-img">
-      <!-- <div class="tags">
-        <a href traget="_blank" class="tag">JavaScript</a>
-      </div>-->
-      <h1>这是一个标题展位</h1>
-      <span>这是副标题展位</span>
+      <slot name="tag"></slot>
+      <slot name="h1slot"></slot>
+      <slot name="spanslot"></slot>
     </div>
-    <HomeContent />
   </div>
 </template>
 
 <script>
-import HomeContent from './HomeContent'
 export default {
   name: 'HomeHeader',
-  components: {
-    HomeContent
-  }
+  props: {
+    father: String // 接受父组件的值
+  },
+  components: {}
 }
 </script>
 
@@ -43,6 +40,8 @@ export default {
 .warpper .warpper-img .tags {
   width: 100%;
   height: 30px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .warpper .warpper-img .tags .tag {
@@ -56,14 +55,14 @@ export default {
 
 .warpper .warpper-img h1 {
   color: #fff;
-  font-size: 55px;
+  font-size: 80px;
   margin: 10px 0;
 }
 
 .warpper .warpper-img span {
   color: #fff;
   font-size: 20px;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 300;
   font-family: Lora, 'Times New Roman', serif;
 }
