@@ -1,19 +1,16 @@
 # personalblog
 
-## Project setup
+## 项目安装
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行本地服务
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 本地打包
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
