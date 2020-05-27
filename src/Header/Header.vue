@@ -13,8 +13,7 @@
         </router-link>
         <router-link :to="{name: 'MyBookList', params: {
           id: '我是 MyBookList 的副展位'
-        }}"
-        >
+        }}">
           <i class="link-icon"></i>我的书单
         </router-link>
         <router-link :to="{name: 'About', params: {
