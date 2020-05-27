@@ -27,7 +27,7 @@ export default {
 
 .warpper .warpper-img {
   width: 55%;
-  height: 370px;
+  height: 35vh;
   margin: 0 auto;
   background-color: 303030;
   overflow: hidden;

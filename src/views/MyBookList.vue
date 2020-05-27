@@ -5,7 +5,7 @@
         <h1>我是{{msg}}页面的展位</h1>
       </template>
       <template v-slot:spanslot>
-        <span>我是{{msg}}页面的副展位</span>
+        <span>{{$route.params.id}}</span>
       </template>
     </HomeHeader>
   </div>

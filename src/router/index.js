@@ -6,10 +6,6 @@ Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    redirect: '/index'
-  },
-  {
-    path: '/index',
     name: 'Home',
     component: Home,
     meta: {
@@ -25,7 +21,7 @@ const routes = [{
     }
   },
   {
-    path: '/mybooklist',
+    path: '/mybooklist/:id',
     name: 'MyBookList',
     component: () => import('../views/MyBookList.vue'),
     meta: {
@@ -33,20 +29,18 @@ const routes = [{
     }
   },
   {
-    path: '/about',
+    path: '/about/:id',
     name: 'About',
-    // 路由级别代码拆分
-    // 这将为此路由生成单独的块（关于[hash].js）
-    // 当路线被访问时延迟加载的。
     component: () => import('../views/About.vue'),
     meta: {
       title: '关于我'
     }
-  },
+  }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 router.beforeEach((to, from, next) => {

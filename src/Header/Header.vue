@@ -1,18 +1,25 @@
 <template>
   <div id="nav">
     <div class="nav-a">
-      <img src="./../../assets/logo.png" alt @click="backHome" />
+      <img src="./../assets/logo.png" alt @click="backHome" />
       <div class="nav-link">
-        <router-link to="/index">
+        <router-link :to="{name: 'Home'}">
           <i class="link-icon"></i>首页
         </router-link>
-        <router-link to="/archive">
+        <router-link :to="{name: 'Archive', query: {
+          id: 111
+        }}">
           <i class="link-icon"></i>目录
         </router-link>
-        <router-link to="/mybooklist">
+        <router-link :to="{name: 'MyBookList', params: {
+          id: '我是 MyBookList 的副展位'
+        }}"
+        >
           <i class="link-icon"></i>我的书单
         </router-link>
-        <router-link to="/about">
+        <router-link :to="{name: 'About', params: {
+          id: '我是 About 的副展位'
+        }}">
           <i class="link-icon"></i>关于我
         </router-link>
       </div>
@@ -34,6 +41,7 @@ export default {
 <style scoped>
 #nav {
   width: 100%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,7 +54,7 @@ export default {
 
 .nav-a {
   width: 90%;
-  height: 65px;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

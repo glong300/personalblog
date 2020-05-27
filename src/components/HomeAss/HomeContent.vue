@@ -43,6 +43,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   justify-items: center;
+  padding-bottom: 30px;
 }
 
 .container-content {

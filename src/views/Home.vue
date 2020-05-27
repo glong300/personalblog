@@ -2,10 +2,10 @@
   <div class="home">
     <HomeHeader :father="faData">
       <template v-slot:h1slot>
-        <h1>我是{{msg}}页面的展位</h1>
+        <h1>我是首页的展位</h1>
       </template>
       <template  v-slot:spanslot>
-        <span>我是{{msg}}页面的展位</span>
+        <span>我是 首页 的副展位</span>
       </template>
     </HomeHeader>
     <HomeContent />
@@ -28,6 +28,9 @@ export default {
   components: {
     HomeHeader,
     HomeContent
+  },
+  mounted() {
+    console.log(this.$route)
   }
 }
 </script>

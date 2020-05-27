@@ -13,7 +13,7 @@
 <style scoped>
   .container {
     width: 70%;
-    height: 200px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
