@@ -35,6 +35,14 @@ const routes = [{
     meta: {
       title: '关于我'
     }
+  },
+  {
+    path: '/icon',
+    name: 'Icon',
+    component: () => import('../views/Icon.vue'),
+    meta: {
+      title: '图标库'
+    }
   }
 ]
 

@@ -11,6 +11,9 @@
         }}">
           <i class="link-icon"></i>目录
         </router-link>
+        <router-link :to="{name: 'Icon'}">
+          <i class="link-icon"></i>Icon
+        </router-link>
         <router-link :to="{name: 'MyBookList', params: {
           id: '我是 MyBookList 的副展位'
         }}">
