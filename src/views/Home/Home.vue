@@ -1,21 +1,21 @@
 <template>
   <div class="home">
-    <HomeHeader :father="faData">
+    <ContentTitle :father="faData">
       <template v-slot:h1slot>
         <h1>我是首页的展位</h1>
       </template>
       <template  v-slot:spanslot>
         <span>我是 首页 的副展位</span>
       </template>
-    </HomeHeader>
+    </ContentTitle>
     <HomeContent />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeHeader from '@/components/HomeAss/HomeHeader.vue'
-import HomeContent from './../components/HomeAss/HomeContent.vue'
+import ContentTitle from './../../components/Content/ContentTitle'
+import HomeContent from './HomeContent.vue'
 
 export default {
   name: 'Home',
@@ -26,7 +26,7 @@ export default {
     }
   },
   components: {
-    HomeHeader,
+    ContentTitle,
     HomeContent
   },
   mounted() {

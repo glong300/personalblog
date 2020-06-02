@@ -17,11 +17,10 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .container span {
     color: #fff;
-    margin-bottom: 30px;
   }
 </style>

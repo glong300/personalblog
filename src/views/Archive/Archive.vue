@@ -1,20 +1,20 @@
 <template>
   <div class="container">
-    <HomeHeader>
+    <ContentTitle>
       <template v-slot:h1slot>
         <h1>我是{{msg}}页面的展位</h1>
       </template>
       <template v-slot:spanslot>
         <span>{{$route.query.id}}</span>
       </template>
-    </HomeHeader>
+    </ContentTitle>
     <ArchiveCont />
   </div>
 </template>
 
 <script>
-import HomeHeader from './../components/HomeAss/HomeHeader'
-import ArchiveCont from './../components/ArchiveAss/ArchiveCont'
+import ContentTitle from './../../components/Content/ContentTitle'
+import ArchiveCont from './ArchiveCont'
 
 export default {
   name: 'Archive',
@@ -24,7 +24,7 @@ export default {
     }
   },
   components: {
-    HomeHeader,
+    ContentTitle,
     ArchiveCont
   },
   mounted() {

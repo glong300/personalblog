@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'HomeHeader',
+  name: 'ContentTitle',
   props: {
     father: String // 接受父组件的值
   },
@@ -21,13 +21,13 @@ export default {
 <style scoped>
 .warpper {
   width: 100%;
-  height: 100%;
+  height: 400px;
   background-color: #303030;
 }
 
 .warpper .warpper-img {
   width: 55%;
-  height: 35vh;
+  height: 100%;
   margin: 0 auto;
   background-color: 303030;
   overflow: hidden;

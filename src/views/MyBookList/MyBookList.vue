@@ -1,30 +1,27 @@
 <template>
   <div class="container">
-    <HomeHeader>
+    <ContentTitle>
       <template v-slot:h1slot>
         <h1>我是{{msg}}页面的展位</h1>
       </template>
       <template v-slot:spanslot>
         <span>{{$route.params.id}}</span>
       </template>
-    </HomeHeader>
+    </ContentTitle>
   </div>
 </template>
 
 <script>
-import HomeHeader from './../components/HomeAss/HomeHeader'
+import ContentTitle from './../../components/Content/ContentTitle'
 export default {
-  name: 'About',
-  data() {
+  name: 'MyBookList',
+  data () {
     return {
-      msg: 'About'
+        msg: 'MyBookList'
     }
   },
   components: {
-    HomeHeader
-  },
-  mounted() {
-    console.log(this.$route.params.id)
+    ContentTitle
   }
 }
 </script>

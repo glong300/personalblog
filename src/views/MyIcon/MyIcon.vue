@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <HomeHeader>
+    <ContentTitle>
       <template v-slot:h1slot>
         <h1>我是Icon的展位</h1>
       </template>
       <template v-slot:spanslot>
         <span>我是 Icon 的副展位</span>
       </template>
-    </HomeHeader>
+    </ContentTitle>
     <div class="icon-cten">
       <div class="icon-k">
         <Badge />
@@ -29,12 +29,12 @@
 </template>
 
 <script>
-import HomeHeader from '@/components/HomeAss/HomeHeader.vue'
-import Badge from './../components/Icons/Badge.vue'
-import LandMark from './../components/Icons/LandMark.vue'
-import Heart from './../components/Icons/Heart.vue'
-import Email from './../components/Icons/Email.vue'
-import CircleLoading from './../components/Icons/CircleLoading.vue'
+import ContentTitle from './../../components/Content/ContentTitle'
+import Badge from './Badge.vue'
+import LandMark from './LandMark.vue'
+import Heart from './Heart.vue'
+import Email from './Email.vue'
+import CircleLoading from './CircleLoading.vue'
 
 
 export default {
@@ -43,7 +43,7 @@ export default {
     return {}
   },
   components: {
-    HomeHeader,
+    ContentTitle,
     Badge,
     LandMark,
     Heart,

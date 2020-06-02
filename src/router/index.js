@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -15,7 +15,7 @@ const routes = [{
   {
     path: '/archive',
     name: 'Archive',
-    component: () => import('../views/Archive.vue'),
+    component: () => import('../views/Archive/Archive.vue'),
     meta: {
       title: '目录'
     }
@@ -23,7 +23,7 @@ const routes = [{
   {
     path: '/mybooklist/:id',
     name: 'MyBookList',
-    component: () => import('../views/MyBookList.vue'),
+    component: () => import('../views/MyBookList/MyBookList.vue'),
     meta: {
       title: '我的书单'
     }
@@ -31,7 +31,7 @@ const routes = [{
   {
     path: '/about/:id',
     name: 'About',
-    component: () => import('../views/About.vue'),
+    component: () => import('../views/About/About.vue'),
     meta: {
       title: '关于我'
     }
@@ -39,7 +39,7 @@ const routes = [{
   {
     path: '/icon',
     name: 'Icon',
-    component: () => import('../views/Icon.vue'),
+    component: () => import('../views/MyIcon/MyIcon.vue'),
     meta: {
       title: '图标库'
     }

@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div class="nav-a">
-      <img src="./../assets/logo.png" alt @click="backHome" />
+      <img src="./../../assets/logo.png" alt @click="backHome" />
       <div class="nav-link">
         <router-link :to="{name: 'Home'}">
           <i class="link-icon"></i>首页
@@ -12,11 +12,13 @@
           <i class="link-icon"></i>目录
         </router-link>
         <router-link :to="{name: 'Icon'}">
-          <i class="link-icon"></i>Icon
+          <i class="link-icon"></i>图标
         </router-link>
-        <router-link :to="{name: 'MyBookList', params: {
+        <router-link
+          :to="{name: 'MyBookList', params: {
           id: '我是 MyBookList 的副展位'
-        }}">
+        }}"
+        >
           <i class="link-icon"></i>我的书单
         </router-link>
         <router-link :to="{name: 'About', params: {
@@ -49,7 +51,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  box-shadow: 0px 3px 5px #1d1d1d;
+  box-shadow: 0px 2px 3px #1d1d1d;
   position: relative;
   z-index: 99;
 }

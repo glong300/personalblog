@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Header from "./Header/Header.vue";
+import Header from "./components/Header/Header.vue";
 import Footer from "./components/Footer/Footer.vue";
 
 export default {
@@ -44,14 +44,15 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #303030;
 }
 #app-content {
   width: 100%;
-  min-height: calc(100vh - 15vh);
+  min-height: calc(100vh - 10vh);
   background-color: #fff;
 }
 #app-footer {
   width: 100%;
-  height: 15vh;
+  height: 10vh;
 }
 </style>
