@@ -24,6 +24,9 @@
       <div class="icon-k">
         <CircleLoading />
       </div>
+      <div class="icon-k">
+        <DottedLoading />
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +38,7 @@ import LandMark from './LandMark.vue'
 import Heart from './Heart.vue'
 import Email from './Email.vue'
 import CircleLoading from './CircleLoading.vue'
+import DottedLoading from './DottedLoading.vue'
 
 
 export default {
@@ -48,7 +52,8 @@ export default {
     LandMark,
     Heart,
     Email,
-    CircleLoading
+    CircleLoading,
+    DottedLoading
   }
 }
 </script>
@@ -66,6 +71,7 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .icon-k {
@@ -76,5 +82,6 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  margin-bottom: 30px;
 }
 </style>

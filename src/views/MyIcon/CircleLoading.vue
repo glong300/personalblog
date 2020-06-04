@@ -24,8 +24,8 @@ export default {
   font-size: 12px;
   font-weight: bold;
   color: rgb(172, 28, 177);
-  /* box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2),
-    inset 0 1px 2px 2px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 1px 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .circle-loading::before {
@@ -53,12 +53,11 @@ export default {
   margin-top: -24px;
   display: block;
   border: 4px solid transparent;
-  border-top-color: rgb(229, 100, 246);
+  border-bottom-color: rgb(229, 100, 246);
   border-radius: 100%;
   width: 40px;
   height: 40px;
-  animation: rotate1 infinite 1.5s ease;
-  animation-delay: 1s;
+  animation: rotate1 infinite 1.5s linear;
 }
 
 @keyframes rotate1 {
