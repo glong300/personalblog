@@ -2,10 +2,7 @@
   <div class="container">
     <ContentTitle>
       <template v-slot:h1slot>
-        <h1>我是{{msg}}页面的展位</h1>
-      </template>
-      <template v-slot:spanslot>
-        <span>{{$route.params.id}}</span>
+        <h2>一个充满积极、乐观、爱好学习技术的前端工程师</h2>
       </template>
     </ContentTitle>
   </div>
@@ -13,12 +10,18 @@
 
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
+import { mapState } from 'vuex'
 export default {
   name: 'About',
   data() {
     return {
       msg: 'About'
     }
+  },
+  computed: {
+    ...mapState({
+      counter: state => state.counter
+    })
   },
   components: {
     ContentTitle
