@@ -2,8 +2,9 @@ const path = require('path')
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
+const BASE_URL = process.env.NODE_ENV === 'production' ? "/personalblog/" : '/';
 module.exports = {
-  publicPath: './',
+  publicPath: BASE_URL,
   outputDir: 'dist',
   assetsDir: 'assets',
   // webpack 基本操作
