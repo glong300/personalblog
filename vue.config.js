@@ -4,7 +4,7 @@ function resolve(dir) {
 }
 const BASE_URL = process.env.NODE_ENV === 'production' ? "/personalblog/" : '/';
 module.exports = {
-  publicPath: BASE_URL,
+  publicPath: './',
   outputDir: 'dist',
   assetsDir: 'assets',
   // webpack 基本操作
