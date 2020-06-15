@@ -3,11 +3,12 @@
     <div class="container">
       <div class="container-content">
         <div v-for="(item, index) in articleData" :key="index" class="cont-card">
-          <a href>
+          <a :href="item.link">
             <h2>
-              <font color="#EE0000">[置顶]</font>
-              我是标题{{index}}
+              <font color="#EE0000" v-show="index==0">[置顶]</font>
+              {{item.title}}
             </h2>
+            <div class="content-txt">{{item.HomeContext}}</div>
           </a>
         </div>
       </div>
@@ -17,11 +18,30 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'HomeContent',
   data() {
     return {
-      articleData: [1, 1, 1] // 文章数据
+      articleData: [] // 文章数据
+    }
+  },
+  mounted() {
+    this.getTopppingData()
+  },
+  methods: {
+    getTopppingData() {
+      let _this = this
+      axios
+        .get('data/HomeData.json')
+        .then(function(response) {
+          _this.articleData = response.data.toppingData
+          _this.$emit('articleData', _this.articleData)
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
     }
   }
 }
@@ -49,6 +69,12 @@ export default {
 .container-content {
   width: 73%;
   height: 100%;
+  text-align: left;
+}
+
+.container-content .content-txt {
+  font-size: 16px;
+  color: #434343;
 }
 
 .container-content .cont-card {

@@ -30,7 +30,7 @@ export default {
 
 <style>
 #app {
-  width: 100%;
+  min-width: 1024px;
   height: 100%;
   text-align: center;
   color: #fff;
@@ -45,6 +45,7 @@ export default {
   top: 0;
   left: 0;
   background-color: #303030;
+  z-index: 99;
 }
 #app-content {
   width: 100%;

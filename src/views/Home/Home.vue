@@ -1,14 +1,14 @@
 <template>
   <div class="home">
-    <ContentTitle :father="faData">
+    <ContentTitle>
       <template v-slot:h1slot>
-        <form :action="activeUrl">
+        <form :action="activeUrl" @submit.prevent="search">
           <div class="header">
             <div class="icons" @click="changeIcon">
               <i class="icon-search" v-if="iconSwitch"></i>
               <i class="icon-search-baidu" v-else></i>
             </div>
-            <input type="text" class="search" ref="search" name="wd" placeholder="点击图标可切换搜索引擎" />
+            <input type="text" class="search" v-model="msgInput" placeholder="点击图标可切换搜索引擎" />
           </div>
         </form>
       </template>
@@ -16,7 +16,7 @@
         <span>我是 首页 的副展位</span>
       </template>-->
     </ContentTitle>
-    <HomeContent />
+    <HomeContent @articleData="articleDatas" />
   </div>
 </template>
 
@@ -27,26 +27,42 @@ import HomeContent from './HomeContent.vue'
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      msg: 'Home',
-      faData: '我是父组件的值',
-      iconSwitch: true,
-    }
-  },
-  computed: {
-    activeUrl() {
-      return this.iconSwitch ? '' : 'https://www.baidu.com/s'
-    }
-  },
+  // 定义组件
   components: {
     ContentTitle,
     HomeContent
   },
+  data() {
+    return {
+      msgInput: '',
+      sonData: [],
+      iconSwitch: true
+    }
+  },
+  // 计算属性
+  computed: {
+    activeUrl() {
+      return this.iconSwitch ? '#' : 'https://www.baidu.com/s'
+    }
+  },
   methods: {
+    // 更改搜索引擎
     changeIcon() {
       this.iconSwitch = !this.iconSwitch
-      console.log(this.iconSwitch)
+    },
+    // 获取子组件的值
+    articleDatas(data) {
+      this.sonData = data
+    },
+    // 搜索本地数据
+    search() {
+      let sonData = this.sonData
+      let reg = new RegExp(this.msgInput)
+      for (let i = 0; i < sonData.length; i++) {
+        if (sonData[i].title.match(reg)) {
+          sonData.unshift(sonData.splice(i, 1)[0])
+        }
+      }
     }
   },
   mounted() {}
@@ -58,7 +74,6 @@ export default {
   max-width: 600px;
   height: 45px;
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   margin: 50px auto 0 auto;
@@ -105,6 +120,6 @@ export default {
   outline: none;
   padding: 0 30px 0 50px;
   color: #424242;
-  font-size: 16px;
+  font-size: 14px;
 }
 </style>

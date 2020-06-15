@@ -40,7 +40,6 @@ import Email from './Email.vue'
 import CircleLoading from './CircleLoading.vue'
 import DottedLoading from './DottedLoading.vue'
 
-
 export default {
   name: 'Icon',
   data() {
@@ -63,12 +62,13 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 .icon-cten {
   width: 50vw;
   height: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   flex-wrap: wrap;
@@ -82,6 +82,6 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  margin-bottom: 30px;
+  margin: 0 20px 30px 20px;
 }
 </style>
