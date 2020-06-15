@@ -6,21 +6,20 @@ module.exports = {
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'assets',
-  indexPath: 'index.html',
   // webpack 基本操作
-  // configureWebpack: {
-  //   resolve: {
-  //     alias: {
-  //       "assets": '@/assets',
-  //       "components": '@/components'
-  //     }
-  //   }
-  // },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "assets": '@/assets',
+        "components": '@/components'
+      }
+    }
+  },
   // webpack链式操作
-  chainWebpack: (config) => {
-    config.resolve.alias
-      .set('@', resolve('src'))
-      .set('assets', resolve('src/assets'))
-      .set('components', resolve('src/components'))
-  }
+  // chainWebpack: (config) => {
+  //   config.resolve.alias
+  //     .set('@', resolve('src'))
+  //     .set('assets', resolve('src/assets'))
+  //     .set('components', resolve('src/components'))
+  // }
 }
