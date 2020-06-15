@@ -3,18 +3,18 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'dist',
   assetsDir: 'assets',
   // webpack 基本操作
   configureWebpack: {
     resolve: {
       alias: {
-        "assets": '@/assets',
-        "components": '@/components'
+        assets: '@/assets',
+        components: '@/components'
       }
     }
-  },
+  }
   // webpack链式操作
   // chainWebpack: (config) => {
   //   config.resolve.alias
