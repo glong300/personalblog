@@ -2,10 +2,9 @@
   <div class="container">
     <ContentTitle>
       <template v-slot:h1slot>
-        <h1>我是{{msg}}页面的展位</h1>
-      </template>
-      <template v-slot:spanslot>
-        <span>{{$route.query.id}}</span>
+        <h1>
+          <i>目录</i>
+        </h1>
       </template>
     </ContentTitle>
     <ArchiveCont />
@@ -27,9 +26,8 @@ export default {
     ContentTitle,
     ArchiveCont
   },
-  mounted() {
-    console.log(this.$route.query)
-  }
+  mounted() {},
+  methods: {}
 }
 </script>
 

@@ -3,7 +3,10 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  assetsDir: '@/assets',
+  publicPath: '/',
+  outputDir: 'dist',
+  assetsDir: 'assets',
+  indexPath: 'index.html',
   // webpack 基本操作
   // configureWebpack: {
   //   resolve: {

@@ -2,10 +2,9 @@
   <div class="container">
     <ContentTitle>
       <template v-slot:h1slot>
-        <h1>我是Icon的展位</h1>
-      </template>
-      <template v-slot:spanslot>
-        <span>我是 Icon 的副展位</span>
+        <h1>
+          <i>Icon</i>
+        </h1>
       </template>
     </ContentTitle>
     <div class="icon-cten">

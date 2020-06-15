@@ -34,7 +34,7 @@ export default {
     getTopppingData() {
       let _this = this
       axios
-        .get('data/HomeData.json')
+        .get('/data/homeData.json')
         .then(function(response) {
           _this.articleData = response.data.toppingData
           _this.$emit('articleData', _this.articleData)

@@ -4,10 +4,10 @@
       <div class="war-content">
         <h3 class="war-title">目录</h3>
         <div v-for="(item, index) in blogsData" :key="index" class="war-blogs">
-          <font color="blue">2020-5-2{{index}}</font>
-          <a href>
-            <font color="#EE0000">【置顶】</font>
-            我是标题{{index}}
+          <font color="blue">{{item.archiveDate}}</font>
+          <a :href="item.link" :class="[index==0?'':'notop']">
+            <font color="#EE0000" v-show="index==0">【置顶】</font>
+            {{item.archiveTitle}}
           </a>
         </div>
       </div>
@@ -17,14 +17,32 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "ArchiveCont",
+  name: 'ArchiveCont',
   data() {
     return {
-      blogsData: [1, 2, 3, 4]
-    };
+      blogsData: []
+    }
+  },
+  mounted() {
+    this.getArchiveData()
+  },
+  methods: {
+    getArchiveData() {
+      let _this = this
+      axios
+        .get('/data/archiveData.json')
+        .then(function(response) {
+          console.log(response)
+          _this.blogsData = response.data.archiveData
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
+    }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -79,6 +97,11 @@ export default {
   overflow: hidden; /*超出隐藏*/
   text-overflow: ellipsis; /*文本超出三点代替*/
 }
+
+.war-blogs a.notop {
+  margin-left: 12px;
+}
+
 .warpper .war-label {
   width: 25%;
   height: 500px;
