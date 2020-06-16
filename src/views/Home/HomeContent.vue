@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: 'HomeContent',
@@ -33,7 +32,7 @@ export default {
   methods: {
     getTopppingData() {
       let _this = this
-      axios
+      this.axios
         .get('/data/homeData.json')
         .then(function(response) {
           _this.articleData = response.data.toppingData

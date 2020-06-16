@@ -4,27 +4,26 @@
       <img src="./../../assets/logo.png" alt @click="backHome" />
       <div class="nav-link">
         <router-link :to="{name: 'Home'}">
-          <i class="link-icon"></i>首页
+          <!-- <i class="link-icon"></i> -->
+          首页
         </router-link>
-        <router-link :to="{name: 'Archive', query: {
-          id: 111
-        }}">
-          <i class="link-icon"></i>目录
+        <router-link :to="{name: 'Archive'}">
+          <!-- <i class="link-icon"></i> -->
+          目录
         </router-link>
         <router-link :to="{name: 'Icon'}">
-          <i class="link-icon"></i>图标
+          <!-- <i class="link-icon"></i> -->
+          图标
         </router-link>
         <router-link
-          :to="{name: 'MyBookList', params: {
-          id: '我是 MyBookList 的副展位'
-        }}"
+          :to="{name: 'MyBookList'}"
         >
-          <i class="link-icon"></i>我的书单
+          <!-- <i class="link-icon"></i>-->
+          我的 书单
         </router-link>
-        <router-link :to="{name: 'About', params: {
-          id: '我是 About 的副展位'
-        }}">
-          <i class="link-icon"></i>关于我
+        <router-link :to="{name: 'About'}">
+          <!-- <i class="link-icon"></i>-->
+          关于我
         </router-link>
       </div>
     </div>

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'ArchiveCont',
   data() {
@@ -31,7 +31,7 @@ export default {
   methods: {
     getArchiveData() {
       let _this = this
-      axios
+      this.axios
         .get('/data/archiveData.json')
         .then(function(response) {
           console.log(response)
