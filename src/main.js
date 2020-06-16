@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 Vue.prototype.axios = Axios
 
 // 使每次请求都会带一个 /api 前缀 
-// Axios.defaults.baseURL = '/api'
+Axios.defaults.baseURL = '/api'
 
 new Vue({
   router,

@@ -19,7 +19,7 @@
           :to="{name: 'MyBookList'}"
         >
           <!-- <i class="link-icon"></i>-->
-          我的 书单
+          我的书单
         </router-link>
         <router-link :to="{name: 'About'}">
           <!-- <i class="link-icon"></i>-->

@@ -22,7 +22,7 @@ const routes = [
     }
   },
   {
-    path: '/mybooklist/:id',
+    path: '/mybooklist/',
     name: 'MyBookList',
     component: () => import('../views/MyBookList/MyBookList.vue'),
     meta: {
@@ -30,7 +30,7 @@ const routes = [
     }
   },
   {
-    path: '/about/:id',
+    path: '/about/',
     name: 'About',
     component: () => import('../views/About/About.vue'),
     meta: {
