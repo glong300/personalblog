@@ -18,7 +18,6 @@
 
 <script>
 // import axios from 'axios'
-import 
 export default {
   name: 'ArchiveCont',
   data() {
@@ -33,7 +32,7 @@ export default {
     getArchiveData() {
       let _this = this
       this.axios
-        .get('/data/archiveData.json')
+        .get('/api/archiveData.json')
         .then(function(response) {
           console.log(response)
           _this.blogsData = response.data.archiveData
