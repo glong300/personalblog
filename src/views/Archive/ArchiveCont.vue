@@ -17,7 +17,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import ArchiveData from 'assets/data/archiveData'
 export default {
   name: 'ArchiveCont',
   data() {
@@ -30,16 +30,17 @@ export default {
   },
   methods: {
     getArchiveData() {
-      let _this = this
-      this.axios
-        .get('/api/archiveData.json')
-        .then(function(response) {
-          console.log(response)
-          _this.blogsData = response.data.archiveData
-        })
-        .catch(function(error) {
-          console.log(error)
-        })
+      this.blogsData = ArchiveData.archiveData
+      // let _this = this
+      // this.axios
+      //   .get('/api/archiveData.json')
+      //   .then(function(response) {
+      //     console.log(response)
+      //     _this.blogsData = response.data.archiveData
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error)
+      //   })
     }
   }
 }

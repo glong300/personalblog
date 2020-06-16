@@ -18,7 +18,7 @@
 </template>
 
 <script>
-
+import homeData from 'assets/data/homeData'
 export default {
   name: 'HomeContent',
   data() {
@@ -31,16 +31,8 @@ export default {
   },
   methods: {
     getTopppingData() {
-      let _this = this
-      this.axios
-        .get('/data/homeData.json')
-        .then(function(response) {
-          _this.articleData = response.data.toppingData
-          _this.$emit('articleData', _this.articleData)
-        })
-        .catch(function(error) {
-          console.log(error)
-        })
+      this.articleData = homeData.toppingData
+      this.$emit('articleData', this.articleData)
     }
   }
 }
