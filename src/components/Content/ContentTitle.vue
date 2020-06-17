@@ -23,6 +23,7 @@ export default {
   width: 100%;
   height: 400px;
   background-color: #303030;
+  text-align: center;
 }
 
 .warpper .warpper-img {

@@ -4,7 +4,7 @@
       <div class="war-content">
         <h3 class="war-title">目录</h3>
         <div v-for="(item, index) in blogsData" :key="index" class="war-blogs">
-          <font color="blue">{{item.archiveDate}}</font>
+          <font color="blue">[{{item.archiveDate}}]</font>
           <a :href="item.link" :class="[index==0?'':'notop']">
             <font color="#EE0000" v-show="index==0">【置顶】</font>
             {{item.archiveTitle}}
@@ -32,15 +32,15 @@ export default {
     getArchiveData() {
       this.blogsData = ArchiveData.archiveData
       // let _this = this
-      // this.axios
-      //   .get('/api/archiveData.json')
-      //   .then(function(response) {
-      //     console.log(response)
-      //     _this.blogsData = response.data.archiveData
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error)
-      //   })
+      this.axios
+        .get('/api/archiveData.json')
+        .then(function(response) {
+          console.log(response)
+          _this.blogsData = response.data.archiveData
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
     }
   }
 }
@@ -97,10 +97,14 @@ export default {
   white-space: nowrap; /*不允许换行*/
   overflow: hidden; /*超出隐藏*/
   text-overflow: ellipsis; /*文本超出三点代替*/
+  font-weight: 450;
+}
+.war-blogs a:hover {
+  color: #0085a1;
 }
 
 .war-blogs a.notop {
-  margin-left: 12px;
+  margin-left: 6px;
 }
 
 .warpper .war-label {

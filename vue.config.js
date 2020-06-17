@@ -16,10 +16,23 @@ module.exports = {
       }
     }
   },
+  chainWebpack: (config) => {
+    config.module
+      .rule('md')
+      .test(/\.md/)
+      .use('vue-loader')
+      .loader('vue-loader')
+      .end()
+      .use('vue-markdown-loader')
+      .loader('vue-markdown-loader/lib/markdown-compiler')
+      .options({
+        raw: true
+      })
+  },
   // 配置代理
   devServer: {
     // proxy: 'http: localhost:8080',
-    open: true,
+    open: true
     // host: 'localhost',
     // port: '8080',
     // hotOnly: false,

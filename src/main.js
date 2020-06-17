@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Axios from 'axios'
+import 'highlight.js/styles/atom-one-dark.css'
+import 'github-markdown-css'
 
 Vue.config.productionTip = false
 
@@ -12,7 +14,7 @@ Vue.config.productionTip = false
 Vue.prototype.axios = Axios
 
 // 使每次请求都会带一个 /api 前缀 
-Axios.defaults.baseURL = '/api'
+// Axios.defaults.baseURL = '/api'
 
 new Vue({
   router,

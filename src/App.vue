@@ -32,7 +32,6 @@ export default {
 #app {
   min-width: 1024px;
   height: 100%;
-  text-align: center;
   color: #fff;
   overflow: hidden;
   background-color: #303030;
@@ -46,11 +45,13 @@ export default {
   left: 0;
   background-color: #303030;
   z-index: 99;
+  text-align: center;
 }
 #app-content {
   width: 100%;
   min-height: calc(100vh - 10vh);
   background-color: #fff;
+  padding-bottom: 30px;
 }
 #app-footer {
   width: 100%;
