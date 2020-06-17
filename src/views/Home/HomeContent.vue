@@ -20,6 +20,7 @@
 
 <script>
 import homeData from 'assets/data/homeData'
+import appUtil from '../../network/request'
 export default {
   name: 'HomeContent',
   data() {
@@ -28,6 +29,17 @@ export default {
     }
   },
   mounted() {
+    appUtil
+      .request({
+        url: 'wxm/live/getPersonalFile',
+        method: 'GET'
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .catch( err => {
+        console.log(err)
+      })
     this.getTopppingData()
   },
   methods: {

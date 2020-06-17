@@ -32,15 +32,15 @@ export default {
     getArchiveData() {
       this.blogsData = ArchiveData.archiveData
       // let _this = this
-      this.axios
-        .get('/api/archiveData.json')
-        .then(function(response) {
-          console.log(response)
-          _this.blogsData = response.data.archiveData
-        })
-        .catch(function(error) {
-          console.log(error)
-        })
+      // this.axios
+      //   .get('/api/archiveData.json')
+      //   .then(function(response) {
+      //     console.log(response)
+      //     _this.blogsData = response.data.archiveData
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error)
+      //   })
     }
   }
 }
