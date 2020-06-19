@@ -4,7 +4,9 @@
       <div class="box1">
         <ContentTitle class="about-me">
           <template v-slot:h1slot>
-            <img src class="me-img" alt />
+            <a href="http://glong300.gitee.io/searchs">
+              <img src='~assets/headImg.png' class="me-img" alt />
+            </a>
             <div>
               <h2>一个充满积极、乐观、爱好学习技术的前端工程师</h2>
               <p>现就职于重庆某科技公司</p>
@@ -45,7 +47,7 @@ export default {
     // console.log(this.$route.params.id)
     let box = this.$refs.box
     let self = this
-    box.addEventListener('wheel', function(event) {
+    document.addEventListener('wheel', function(event) {
       let e = event || window.event
       if (self.kai) {
         self.kai = false // 开关 防止在动画中重复滑动
@@ -74,7 +76,7 @@ export default {
 <style scoped>
 .container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -99,7 +101,11 @@ export default {
   width: 100%;
   height: 100%;
 }
-.about-me .me-img {
+.about-me a {
+  width: 100%;
+  height: 100px;
+}
+.about-me a .me-img {
   width: 100px;
   height: 100px;
   margin: 0 auto;
