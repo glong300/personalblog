@@ -4,9 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  counter: 1000
+  switchCom: true
 }
 
 export default new Vuex.Store({
   state,
+  mutations: {
+    updateSwitchCom(state, payLoad) {
+      state.switchCom = payLoad
+    }
+  }
 })

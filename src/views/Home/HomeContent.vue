@@ -77,7 +77,7 @@ export default {
 
 .container-content .cont-card {
   width: 100%;
-  height: 200px;
+  min-height: 150px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;

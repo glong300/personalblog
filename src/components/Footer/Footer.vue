@@ -22,5 +22,6 @@
 
   .container span {
     color: #fff;
+    text-align: center;
   }
 </style>

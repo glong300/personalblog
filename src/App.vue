@@ -6,31 +6,41 @@
     <div id="app-content">
       <router-view />
     </div>
-    <div id="app-footer">
+    <div id="app-footer" v-show="switchCom">
       <Footer />
     </div>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header/Header.vue";
-import Footer from "./components/Footer/Footer.vue";
+import { mapState } from 'vuex'
+import Header from './components/Header/Header.vue'
+import Footer from './components/Footer/Footer.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   data() {
-    return {};
+    return {
+    }
   },
   components: {
     Header,
     Footer
-  }
-};
+  },
+  computed: {
+    ...mapState({
+      switchCom: state => state.switchCom
+    })
+  },
+  methods: {
+  },
+  mounted() {}
+}
 </script>
 
 <style>
 #app {
-  min-width: 1024px;
+  min-width: 860px;
   height: 100%;
   color: #fff;
   overflow: hidden;
@@ -51,7 +61,6 @@ export default {
   width: 100%;
   min-height: calc(100vh - 10vh);
   background-color: #fff;
-  padding-bottom: 30px;
 }
 #app-footer {
   width: 100%;

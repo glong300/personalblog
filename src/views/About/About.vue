@@ -4,11 +4,13 @@
       <div class="box1">
         <ContentTitle class="about-me">
           <template v-slot:h1slot>
-            <a href="http://glong300.gitee.io/searchs">
-              <img src='~assets/headImg.png' class="me-img" alt />
-            </a>
+            <div class="user">
+              <a href="http://glong300.gitee.io/searchs">
+                <img src="~assets/headImg.png" class="me-img" alt />
+              </a>
+            </div>
             <div>
-              <h2>一个充满积极、乐观、爱好学习技术的前端工程师</h2>
+              <h4>一个充满积极、乐观、爱好学习技术的前端工程师</h4>
               <p>现就职于重庆某科技公司</p>
             </div>
           </template>
@@ -30,21 +32,17 @@ export default {
   name: 'About',
   data() {
     return {
-      kai: true, // 开关
+      kai: true,
       index: 0
     }
   },
-  computed: {
-    ...mapState({
-      counter: state => state.counter
-    })
-  },
+  computed: {},
   components: {
     ContentTitle,
     Skill
   },
   mounted() {
-    // console.log(this.$route.params.id)
+    this.$store.commit('updateSwitchCom', false)
     let box = this.$refs.box
     let self = this
     document.addEventListener('wheel', function(event) {
@@ -69,6 +67,9 @@ export default {
         }, 1000)
       }
     })
+  },
+  destroyed() {
+    this.$store.commit('updateSwitchCom', true)
   }
 }
 </script>
@@ -77,14 +78,11 @@ export default {
 .container {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .box {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .box .box1,
@@ -101,8 +99,11 @@ export default {
   width: 100%;
   height: 100%;
 }
-.about-me a {
+.about-me .user {
   width: 100%;
+}
+.about-me a {
+  width: 100px;
   height: 100px;
 }
 .about-me a .me-img {

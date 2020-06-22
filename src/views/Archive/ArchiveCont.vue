@@ -59,6 +59,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .warpper .war-content {
