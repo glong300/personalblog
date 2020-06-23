@@ -7,15 +7,17 @@
         </h1>
       </template>
     </ContentTitle>
-    <!-- <div class="markdown-body">
+    <div class="markdown-body">
       <div class="book-list">
+        <Code />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
+import Code from 'assets/a.md'
 
 export default {
   name: 'MyBookList',
@@ -28,7 +30,7 @@ export default {
   },
   components: {
     ContentTitle,
-    // Code
+    Code
   },
   mounted() {
     // let _this = this
@@ -52,6 +54,11 @@ export default {
   margin: 0 auto;
   color: #424242;
   font-size: 16px;
+  padding: 30px 0;
+}
+
+.book-list h1 {
+  border: none;
 }
 
 .book-list p {

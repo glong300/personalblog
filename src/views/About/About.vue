@@ -49,7 +49,7 @@ export default {
       let e = event || window.event
       if (self.kai) {
         self.kai = false // 开关 防止在动画中重复滑动
-        box.style.transition = ' .8s ease' // 动画时间
+        box.style.transition = ' 1s ease' // 动画时间
         // 向下滑动
         if (event.wheelDelta < 0 && self.index < 2) {
           self.index++
