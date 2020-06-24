@@ -85,14 +85,14 @@ export default {
 }
 
 .container-content .cont-card a .h2 {
-  width: 100%;
+  width: 80%;
   font-weight: 700;
   font-size: 1.5rem;
   color: #404040;
 }
 
 .container-content .cont-card a .content-txt {
-  width: 100%;
+  width: 80%;
   font-size: 14px;
   font-style: italic;
   color: #a3a3a3;
