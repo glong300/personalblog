@@ -98,7 +98,7 @@ export default {
 .container-content .cont-card a .h2 {
   width: 100%;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: #404040;
 }
 
@@ -134,5 +134,13 @@ export default {
   height: 700px;
   background-color: #434343;
   border-radius: 5px;
+}
+@media screen and (max-width: 960px) {
+  .container-content {
+    width: 100%;
+  }
+  .container-label {
+    display: none;
+  }
 }
 </style>

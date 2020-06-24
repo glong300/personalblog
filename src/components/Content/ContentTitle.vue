@@ -67,4 +67,10 @@ export default {
   font-weight: 300;
   font-family: Lora, 'Times New Roman', serif;
 }
+
+@media screen and (max-width: 375px) {
+  .warpper .warpper-img {
+    width: 80%;
+  }
+}
 </style>

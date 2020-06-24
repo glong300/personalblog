@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="app-header">
-      <Header />
+      <NavBar />
     </div>
     <div id="app-content">
       <router-view />
@@ -14,17 +14,16 @@
 
 <script>
 import { mapState } from 'vuex'
-import Header from './components/Header/Header.vue'
+import NavBar from './components/NavBar/NavBar.vue'
 import Footer from './components/Footer/Footer.vue'
 
 export default {
   name: 'App',
   data() {
-    return {
-    }
+    return {}
   },
   components: {
-    Header,
+    NavBar,
     Footer
   },
   computed: {
@@ -32,15 +31,14 @@ export default {
       switchCom: state => state.switchCom
     })
   },
-  methods: {
-  },
+  methods: {},
   mounted() {}
 }
 </script>
 
 <style>
 #app {
-  min-width: 860px;
+  min-width: 100%;
   height: 100%;
   color: #fff;
   overflow: hidden;

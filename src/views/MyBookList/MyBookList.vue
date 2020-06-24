@@ -2,7 +2,7 @@
   <div class="container">
     <ContentTitle>
       <template v-slot:h1slot>
-        <h1>
+        <h1 class="cont-title">
           <i>我的书单</i>
         </h1>
       </template>
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       msg: 'MyBookList',
-      bookList: '',
+      bookList: ''
       // code: Code
     }
   },
@@ -89,5 +89,14 @@ export default {
   overflow: auto;
   color: rgb(219, 219, 219);
   display: block;
+}
+
+@media screen and (max-width: 375px) {
+  .cont-title i {
+    font-size: 5rem;
+  }
+  .book-list {
+    width: 80vw;
+  }
 }
 </style>
