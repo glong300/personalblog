@@ -2,13 +2,13 @@
   <div class="home">
     <ContentTitle>
       <template v-slot:h1slot>
-        <form :action="activeUrl" @submit.prevent="search">
+        <form :action="activeUrl">
           <div class="header">
             <div class="icons" @click="changeIcon">
               <i class="icon-search" v-if="iconSwitch"></i>
               <i class="icon-search-baidu" v-else></i>
             </div>
-            <input type="text" class="search" v-model="msgInput" placeholder="点击图标可切换搜索引擎" />
+            <input type="text" name="wd" class="search" v-model="msgInput" placeholder="点击图标可切换搜索引擎" />
           </div>
         </form>
       </template>
@@ -42,7 +42,10 @@ export default {
   // 计算属性
   computed: {
     activeUrl() {
-      return this.iconSwitch ? '#' : 'https://www.baidu.com/s'
+      console.log(`https://www.baidu.com/s`)
+      return this.iconSwitch
+        ? '#'
+        : `https://www.baidu.com/s`
     }
   },
   methods: {
@@ -55,7 +58,8 @@ export default {
       this.sonData = data
     },
     // 搜索本地数据
-    search() {
+    search(e) {
+      this.iconSwitch ? e.preventDefault() : ''
       let sonData = this.sonData
       let reg = new RegExp(this.msgInput)
       for (let i = 0; i < sonData.length; i++) {
@@ -122,4 +126,5 @@ export default {
   color: #424242;
   font-size: 14px;
 }
+
 </style>

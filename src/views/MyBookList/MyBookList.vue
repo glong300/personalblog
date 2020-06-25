@@ -2,33 +2,35 @@
   <div class="container">
     <ContentTitle>
       <template v-slot:h1slot>
-        <h1>
+        <h1 class="cont-title">
           <i>我的书单</i>
         </h1>
       </template>
     </ContentTitle>
-    <!-- <div class="markdown-body">
+    <div class="markdown-body">
       <div class="book-list">
+        <Code />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
+import Code from 'assets/a.md'
 
 export default {
   name: 'MyBookList',
   data() {
     return {
       msg: 'MyBookList',
-      bookList: '',
+      bookList: ''
       // code: Code
     }
   },
   components: {
     ContentTitle,
-    // Code
+    Code
   },
   mounted() {
     // let _this = this
@@ -52,6 +54,11 @@ export default {
   margin: 0 auto;
   color: #424242;
   font-size: 16px;
+  padding: 30px 0;
+}
+
+.book-list h1 {
+  border: none;
 }
 
 .book-list p {
@@ -82,5 +89,14 @@ export default {
   overflow: auto;
   color: rgb(219, 219, 219);
   display: block;
+}
+
+@media screen and (max-width: 375px) {
+  .cont-title i {
+    font-size: 5rem;
+  }
+  .book-list {
+    width: 80vw;
+  }
 }
 </style>

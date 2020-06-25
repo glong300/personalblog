@@ -83,4 +83,10 @@ export default {
   border-radius: 15px;
   margin: 0 20px 30px 20px;
 }
+
+@media screen {
+  .icon-cten {
+    width: 80%;
+  }
+}
 </style>

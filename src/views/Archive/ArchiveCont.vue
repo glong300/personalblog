@@ -6,7 +6,7 @@
         <div v-for="(item, index) in blogsData" :key="index" class="war-blogs">
           <font color="blue">[{{item.archiveDate}}]</font>
           <a :href="item.link" :class="[index==0?'':'notop']">
-            <font color="#EE0000" v-show="index==0">【置顶】</font>
+            <font color="#EE0000" v-show="index==0">[置顶]</font>
             {{item.archiveTitle}}
           </a>
         </div>
@@ -59,6 +59,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .warpper .war-content {
@@ -116,5 +117,16 @@ export default {
   height: 500px;
   background-color: #fff;
   border-radius: 5px;
+}
+@media screen and (max-width: 900px) {
+  .warpper .war-content {
+    width: 100%;
+  }
+  .war-label {
+    display: none;
+  }
+  .war-blogs a {
+    max-width: 70%;
+  }
 }
 </style>

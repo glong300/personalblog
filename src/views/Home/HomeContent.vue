@@ -29,17 +29,6 @@ export default {
     }
   },
   mounted() {
-    appUtil
-      .request({
-        url: 'wxm/live/getPersonalFile',
-        method: 'GET'
-      })
-      .then(res => {
-        console.log(res)
-      })
-      .catch( err => {
-        console.log(err)
-      })
     this.getTopppingData()
   },
   methods: {
@@ -77,7 +66,7 @@ export default {
 
 .container-content .cont-card {
   width: 100%;
-  height: 200px;
+  min-height: 150px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -96,14 +85,14 @@ export default {
 }
 
 .container-content .cont-card a .h2 {
-  width: 100%;
+  width: 80%;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: #404040;
 }
 
 .container-content .cont-card a .content-txt {
-  width: 100%;
+  width: 80%;
   font-size: 14px;
   font-style: italic;
   color: #a3a3a3;
@@ -134,5 +123,13 @@ export default {
   height: 700px;
   background-color: #434343;
   border-radius: 5px;
+}
+@media screen and (max-width: 960px) {
+  .container-content {
+    width: 100%;
+  }
+  .container-label {
+    display: none;
+  }
 }
 </style>
