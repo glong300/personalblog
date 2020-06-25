@@ -86,6 +86,10 @@ export default {
   border-bottom: 1px solid #000;
 }
 
+.war-blogs font {
+  width: 100px;
+}
+
 .war-blogs a {
   max-width: 90%;
   height: 100%;
