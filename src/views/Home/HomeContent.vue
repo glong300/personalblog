@@ -76,6 +76,7 @@ export default {
 }
 
 .container-content .cont-card a {
+  width: 80%;
   text-decoration: none;
   font-weight: 700;
   font-size: 30px;
@@ -85,14 +86,14 @@ export default {
 }
 
 .container-content .cont-card a .h2 {
-  width: 80%;
+  width: 100%;
   font-weight: 700;
   font-size: 1.5rem;
   color: #404040;
 }
 
 .container-content .cont-card a .content-txt {
-  width: 80%;
+  width: 100%;
   font-size: 14px;
   font-style: italic;
   color: #a3a3a3;
@@ -125,11 +126,18 @@ export default {
   border-radius: 5px;
 }
 @media screen and (max-width: 960px) {
+  .container {
+    width: 80%;
+  }
   .container-content {
     width: 100%;
   }
   .container-label {
     display: none;
   }
+  .container-content .cont-card a {
+    width: 100%;
+  }
+  
 }
 </style>

@@ -119,6 +119,9 @@ export default {
   border-radius: 5px;
 }
 @media screen and (max-width: 900px) {
+  .warpper {
+    width: 80%;
+  }
   .warpper .war-content {
     width: 100%;
   }
