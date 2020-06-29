@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <div class="nav-a">
-      <img src="./../../assets/logo.png" alt @click="backHome" />
+      <!-- <img src="./../../assets/logo.png" alt @click="backHome" /> -->
+      <a :href="{name: Home}" class="nav-title" alt>Long</a>
       <div class="nav-link">
         <router-link :to="{name: 'Home'}">
           <!-- <i class="link-icon"></i> -->
@@ -26,7 +27,11 @@
       </div>
       <div class="nav-mobile">
         <img src alt class="mobile-img" @click="showNav" />
-        <div :style="{border: changeShowBorder}" :class="['mobile-link', changeIsShows]" @click="falseNav">
+        <div
+          :style="{border: changeShowBorder}"
+          :class="['mobile-link', changeIsShows]"
+          @click="falseNav"
+        >
           <router-link :to="{name: 'Home'}">
             <!-- <i class="link-icon"></i> -->
             首页
@@ -125,6 +130,14 @@ export default {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.nav-a .nav-title {
+  cursor: pointer;
+  font-size: 28px;
+  text-decoration: none;
+  color: rgb(202, 202, 202);
+  font-style: oblique;
 }
 
 .nav-a .nav-link {

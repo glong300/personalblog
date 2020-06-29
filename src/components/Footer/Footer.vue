@@ -1,6 +1,6 @@
 <template>
   <div class='container'>
-    <span>Copyright © Gityuan 2020 | Xlong的个人博客</span>
+    <span>Copyright © GitLong 2020 | Long的个人博客</span>
   </div>
 </template>
 
