@@ -2,7 +2,7 @@
   <div id="nav">
     <div class="nav-a">
       <!-- <img src="./../../assets/logo.png" alt @click="backHome" /> -->
-      <a :href="{name: Home}" class="nav-title" alt>Long</a>
+      <a href="/" class="nav-title" alt>Long</a>
       <div class="nav-link">
         <router-link :to="{name: 'Home'}">
           <!-- <i class="link-icon"></i> -->
