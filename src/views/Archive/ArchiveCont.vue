@@ -88,7 +88,7 @@ export default {
 }
 
 .war-blogs font {
-  width: 30%;
+  width: 100px;
 }
 
 .war-blogs a {
@@ -119,6 +119,9 @@ export default {
   border-radius: 5px;
 }
 @media screen and (max-width: 900px) {
+  .warpper {
+    width: 80%;
+  }
   .warpper .war-content {
     width: 100%;
   }

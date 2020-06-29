@@ -26,7 +26,7 @@
       </div>
       <div class="nav-mobile">
         <img src alt class="mobile-img" @click="showNav" />
-        <div :class="['mobile-link', changeIsShows]" @click="falseNav">
+        <div :style="{border: changeShowBorder}" :class="['mobile-link', changeIsShows]" @click="falseNav">
           <router-link :to="{name: 'Home'}">
             <!-- <i class="link-icon"></i> -->
             首页
@@ -58,12 +58,16 @@ export default {
   name: 'Header',
   data() {
     return {
-      isShow: false
+      isShow: false, // 移动端是否显示导航栏
+      showBorder: true // 移动端是否不显示导航栏边框
     }
   },
   computed: {
     changeIsShows() {
       return this.isShow ? 'isshow' : ''
+    },
+    changeShowBorder() {
+      return this.showBorder ? 'none' : ''
     }
   },
   methods: {
@@ -72,9 +76,19 @@ export default {
     },
     showNav() {
       this.isShow = !this.isShow
+      if (!this.isShow) {
+        setTimeout(() => {
+          this.showBorder = true
+        }, 390)
+      } else {
+        this.showBorder = false
+      }
     },
     falseNav() {
       this.isShow = false
+      setTimeout(() => {
+        this.showBorder = true
+      }, 390)
     }
   }
 }
@@ -145,11 +159,12 @@ export default {
   box-shadow: 0px 2px 3px #1d1d1d;
   border-top: 1px solid rgb(32, 32, 32);
   overflow: hidden;
-  transition: height .4s ease;
+  transition: height 0.4s ease;
 }
 
 .nav-mobile .mobile-link.isshow {
   height: 280px;
+  /* border-top: 1px solid rgb(32, 32, 32); */
 }
 
 .nav-mobile .mobile-link a {
