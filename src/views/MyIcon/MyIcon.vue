@@ -26,18 +26,22 @@
       <div class="icon-k">
         <DottedLoading />
       </div>
+      <div class="icon-k">
+        <Toggle :size="1.5" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
-import Badge from './Badge.vue'
-import LandMark from './LandMark.vue'
-import Heart from './Heart.vue'
-import Email from './Email.vue'
-import CircleLoading from './CircleLoading.vue'
-import DottedLoading from './DottedLoading.vue'
+import Badge from './Badge'
+import LandMark from './LandMark'
+import Heart from './Heart'
+import Email from './Email'
+import CircleLoading from './CircleLoading'
+import DottedLoading from './DottedLoading'
+import Toggle from './Toggle'
 
 export default {
   name: 'Icon',
@@ -51,7 +55,8 @@ export default {
     Heart,
     Email,
     CircleLoading,
-    DottedLoading
+    DottedLoading,
+    Toggle
   }
 }
 </script>
