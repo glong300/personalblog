@@ -5,7 +5,7 @@ import store from './store'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'github-markdown-css'
 
-Vue.config.productionTip = true
+Vue.config.productionTip = false
 
 new Vue({
   router,
