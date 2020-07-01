@@ -2,7 +2,7 @@
   <div class="archive">
     <div class="warpper">
       <div class="war-content">
-        <h3 class="war-title">目录</h3>
+        <h2 class="war-title">目录</h2>
         <div v-for="(item, index) in blogsData" :key="index" class="war-blogs">
           <font color="blue">[{{item.archiveDate}}]</font>
           <a :href="item.link" :class="[index==0?'':'notop']">

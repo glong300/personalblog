@@ -7,17 +7,18 @@
         </h1>
       </template>
     </ContentTitle>
-    <div class="markdown-body">
+    <BookList />
+    <!-- <div class="markdown-body">
       <div class="book-list">
         <Code />
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
-import Code from 'assets/a.md'
+import BookList from './BookList'
 
 export default {
   name: 'MyBookList',
@@ -25,12 +26,11 @@ export default {
     return {
       msg: 'MyBookList',
       bookList: ''
-      // code: Code
     }
   },
   components: {
     ContentTitle,
-    Code
+    BookList
   },
   mounted() {
     // let _this = this
@@ -47,8 +47,8 @@ export default {
 }
 </script>
 
-<style>
-.book-list {
+<style scoped>
+.mybook-list {
   width: 55vw;
   height: 100%;
   margin: 0 auto;
@@ -57,16 +57,16 @@ export default {
   padding: 30px 0;
 }
 
-.book-list h1 {
+.mybook-list h1 {
   border: none;
 }
 
-.book-list p {
+.mybook-list p {
   line-height: 32px;
   color: #2c3e50;
 }
 
-.book-list p code {
+.mybook-list p code {
   display: inline;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2px 10px 3px 10px;
@@ -74,7 +74,7 @@ export default {
   font-size: 16px;
   line-height: 16px;
 }
-.book-list pre {
+.mybook-list pre {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -82,7 +82,7 @@ export default {
   padding: 0;
 }
 
-.book-list pre .language-js {
+.mybook-list pre .language-js {
   padding: 1.25rem 1.5rem;
   background-color: #282c34;
   border-radius: 6px;
@@ -95,7 +95,7 @@ export default {
   .cont-title i {
     font-size: 5rem;
   }
-  .book-list {
+  .mybook-list {
     width: 80vw;
   }
 }
