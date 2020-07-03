@@ -13,6 +13,7 @@
           </a>
         </div>
       </div>
+      <div class="books-label"></div>
     </div>
   </div>
 </template>
