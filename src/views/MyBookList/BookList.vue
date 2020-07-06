@@ -81,7 +81,7 @@ export default {
 }
 
 .books-blogs font {
-  width: 100px;
+  padding-right: 10px;
 }
 
 .books-blogs a {
