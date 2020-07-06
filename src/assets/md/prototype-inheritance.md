@@ -1,6 +1,6 @@
 # 原型继承
 
-## [[[Prototype\]]](https://zh.javascript.info/prototype-inheritance#prototype)
+## [Prototype](https://zh.javascript.info/prototype-inheritance#prototype)
 
 在 JavaScript 中，对象有一个特殊的隐藏属性 `[[Prototype]]`（如规范中所命名的），它要么为 `null`，要么就是对另一个对象的引用。该对象被称为“原型”：
 

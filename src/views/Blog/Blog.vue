@@ -14,29 +14,62 @@
     </ContentTitle>
     <div class="markdown-body">
       <div class="blog-cont">
-        <Code />
+        <component :is="componentName"></component>
       </div>
     </div>
   </div>
 </template>
 <script>
 import ContentTitle from 'components/Content/ContentTitle'
+// import upperFirst from 'lodash/upperFirst'
+// import camelCase from 'lodash/camelCase'
 
+const context = require.context('assets/md', false, /\.md/)
+const moduleStore = {
+  ContentTitle
+}
+
+context.keys().forEach(file => {
+  // 获取组件配置
+  // const componentConfig = context(fileName)
+  let arr = []
+  file
+    .split('./')[1]
+    .split('.')[0]
+    .split('-')
+    .forEach(item => {
+      arr.push([item[0].toUpperCase() + item.slice(1)])
+    })
+  const fileName = arr.join('')
+  const fileModule = context(file).default
+  moduleStore[fileName] = {
+    ...fileModule
+  }
+  console.log(moduleStore)
+})
 
 export default {
   name: 'Blog',
   data() {
     return {
-      Code: '',
-      
+      code: ''
     }
   },
-  components: {
-    ContentTitle,
+  components: moduleStore,
+  computed: {
+    componentName() {
+      let arr = []
+      console.log(this.$route.params.id)
+      this.$route.params.id
+        .split('-')
+        .forEach(item => {
+          arr.push([item[0].toUpperCase() + item.slice(1)])
+        })
+
+      return arr.join('')
+    }
   },
-  mounted() {
-    console.log(this.$route)
-  }
+  mounted() {}
 }
 </script>
 

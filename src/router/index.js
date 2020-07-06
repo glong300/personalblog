@@ -10,57 +10,57 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '首页'
-    }
+      title: '首页',
+    },
   },
   {
     path: '/archive',
     name: 'Archive',
     component: () => import('../views/Archive/Archive.vue'),
     meta: {
-      title: '目录'
-    }
+      title: '目录',
+    },
   },
   {
     path: '/mybooklist/',
     name: 'MyBookList',
     component: () => import('../views/MyBookList/MyBookList.vue'),
     meta: {
-      title: '我的书单'
-    }
+      title: '我的书单',
+    },
   },
   {
     path: '/about/',
     name: 'About',
     component: () => import('../views/About/About.vue'),
     meta: {
-      title: '关于我'
-    }
+      title: '关于我',
+    },
   },
   {
     path: '/icon',
     name: 'Icon',
     component: () => import('../views/MyIcon/MyIcon.vue'),
     meta: {
-      title: '图标库'
-    }
+      title: '图标库',
+    },
   },
   {
     path: '/:id',
     name: 'Blog',
     component: () => import('../views/Blog/Blog.vue'),
     meta: {
-      title: '内容'
-    }
+      title: '内容',
+    },
   },
   {
     path: '*',
     component: () => import('../views/About/About.vue'),
-  }
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
   // mode: 'history'
 })
 
