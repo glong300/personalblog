@@ -1,0 +1,95 @@
+<template>
+  <div class="blog">
+    <ContentTitle>
+      <template v-slot:h1slot>
+        <h1 class="tag">
+          <i>JavaScript</i>
+        </h1>
+      </template>
+      <template v-slot:h1slot>
+        <h1 class="cont-title">
+          <i>我的书单</i>
+        </h1>
+      </template>
+    </ContentTitle>
+    <div class="markdown-body">
+      <div class="blog-cont">
+        <Code />
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import ContentTitle from 'components/Content/ContentTitle'
+
+
+export default {
+  name: 'Blog',
+  data() {
+    return {
+      Code: '',
+      
+    }
+  },
+  components: {
+    ContentTitle,
+  },
+  mounted() {
+    console.log(this.$route)
+  }
+}
+</script>
+
+<style scoped>
+.blog-cont {
+  width: 55vw;
+  height: 100%;
+  margin: 0 auto;
+  color: #424242;
+  font-size: 16px;
+  padding: 30px 0;
+}
+
+.blog-cont h1 {
+  border: none;
+}
+
+.blog-cont p {
+  line-height: 32px;
+  color: #2c3e50;
+}
+
+.blog-cont p code {
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2px 10px 3px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.blog-cont pre {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.blog-cont pre .language-js {
+  padding: 1.25rem 1.5rem;
+  background-color: #282c34;
+  border-radius: 6px;
+  overflow: auto;
+  color: rgb(219, 219, 219);
+  display: block;
+}
+
+@media screen and (max-width: 375px) {
+  .cont-title i {
+    font-size: 5rem;
+  }
+  .blog-cont {
+    width: 80vw;
+  }
+}
+</style>

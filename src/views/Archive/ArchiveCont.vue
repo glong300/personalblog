@@ -5,7 +5,7 @@
         <h2 class="war-title">目录</h2>
         <div v-for="(item, index) in blogsData" :key="index" class="war-blogs">
           <font color="blue">[{{item.archiveDate}}]</font>
-          <a :href="item.link" :class="[index==0?'':'notop']">
+          <a :href="'#/'+item.link" :class="[index==0?'':'notop']">
             <font color="#EE0000" v-show="index==0">[置顶]</font>
             {{item.archiveTitle}}
           </a>
@@ -24,6 +24,14 @@ export default {
     return {
       blogsData: []
     }
+  },
+  computed: {
+    // LinkClick() {
+    //   console.log(this.$route.query)
+    //   return function(item) {
+    //     return
+    //   }
+    // }
   },
   mounted() {
     this.getArchiveData()
@@ -88,7 +96,7 @@ export default {
 }
 
 .war-blogs font {
-  width: 100px;
+  padding-right: 10px;
 }
 
 .war-blogs a {

@@ -44,11 +44,23 @@ const routes = [
     meta: {
       title: '图标库'
     }
+  },
+  {
+    path: '/:id',
+    name: 'Blog',
+    component: () => import('../views/Blog/Blog.vue'),
+    meta: {
+      title: '内容'
+    }
+  },
+  {
+    path: '*',
+    component: () => import('../views/About/About.vue'),
   }
 ]
 
 const router = new VueRouter({
-  routes,
+  routes
   // mode: 'history'
 })
 
