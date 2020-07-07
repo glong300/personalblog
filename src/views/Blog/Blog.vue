@@ -24,7 +24,7 @@ import ContentTitle from 'components/Content/ContentTitle'
 // import upperFirst from 'lodash/upperFirst'
 // import camelCase from 'lodash/camelCase'
 
-const context = require.context('assets/md', false, /\.md/)
+const context = require.context('@/md', false, /\.md/)
 const moduleStore = {
   ContentTitle
 }
