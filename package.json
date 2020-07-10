@@ -12,6 +12,9 @@
     "core-js": "^3.6.4",
     "github-markdown-css": "^4.0.0",
     "highlight.js": "^10.1.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-nested": "^4.2.3",
+    "saladcss-bem": "0.0.2",
     "vue": "^2.6.11",
     "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.1.6",
@@ -21,6 +24,8 @@
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
+    "postcss": "^7.0.32",
+    "postcss-loader": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

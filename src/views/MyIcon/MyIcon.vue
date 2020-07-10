@@ -8,19 +8,19 @@
       </template>
     </ContentTitle>
     <div class="icon-cten" ref="maxicon">
-      <div class="icon-k" :style="[{transform: 'translate(0, 0)'}]">
+      <div class="icon-k">
         <Badge />
       </div>
-      <div class="icon-k" :style="[{transform: 'translate(100px, 0)'}]">
+      <div class="icon-k">
         <LandMark />
       </div>
-      <div class="icon-k" :style="[`transform: translate(0, 0px)`]">
+      <div class="icon-k">
         <Heart />
       </div>
-      <div class="icon-k" :style="[`transform: translate(0, 0px)`]">
+      <div class="icon-k">
         <Email />
       </div>
-      <div class="icon-k" :style="[`transform: translate(0, 0px)`]">
+      <div class="icon-k">
         <CircleLoading />
       </div>
       <div class="icon-k">
@@ -30,6 +30,9 @@
         <Toggle :size="1.5" />
       </div>
       <div class="icon-ks" v-for="(item, index) in maxIconNum" :key="index"></div>
+    </div>
+    <div class="icon-a">
+      <span>asdfasdfasdf</span>
     </div>
   </div>
 </template>
@@ -84,41 +87,50 @@ export default {
 </script>
 
 <style scoped>
-.container {
+@component container {
   width: 100%;
   height: 100%;
 }
 
-.icon-cten {
-  width: 50vw;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
+@component icon {
+  @descendent cten {
+    width: 50vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  @descendent k {
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 5px rgba(70, 70, 70, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0 20px 30px 20px;
+    transition: all 1s ease;
+  }
+  @descendent ks {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0 20px 30px 20px;
+  }
+  
+  @descendent a {
+    color: red;
 
-.icon-k {
-  width: 100px;
-  height: 100px;
-  box-shadow: 1px 1px 5px rgba(70, 70, 70, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  margin: 0 20px 30px 20px;
-  transition: all 1s ease;
-}
-.icon-ks {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  margin: 0 20px 30px 20px;
+    &:active {
+      background-color: red;
+    }
+  }
 }
 
 @media screen {
