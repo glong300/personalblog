@@ -31,9 +31,6 @@
       </div>
       <div class="icon-ks" v-for="(item, index) in maxIconNum" :key="index"></div>
     </div>
-    <div class="icon-a">
-      <span>asdfasdfasdf</span>
-    </div>
   </div>
 </template>
 
