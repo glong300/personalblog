@@ -26,8 +26,8 @@ export default {
     ContentTitle,
     ArchiveCont
   },
+  methods: {},
   mounted() {},
-  methods: {}
 }
 </script>
 
