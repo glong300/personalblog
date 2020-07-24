@@ -8,7 +8,13 @@
               <i class="icon-search" v-if="iconSwitch"></i>
               <i class="icon-search-baidu" v-else></i>
             </div>
-            <input type="text" name="wd" class="search" v-model="msgInput" placeholder="点击图标可切换搜索引擎" />
+            <input
+              type="text"
+              name="wd"
+              class="search"
+              v-model="msgInput"
+              placeholder="点击图标可切换搜索引擎"
+            />
           </div>
         </form>
       </template>
@@ -30,23 +36,21 @@ export default {
   // 定义组件
   components: {
     ContentTitle,
-    HomeContent
+    HomeContent,
   },
   data() {
     return {
       msgInput: '',
       sonData: [],
-      iconSwitch: true
+      iconSwitch: true,
     }
   },
   // 计算属性
   computed: {
     activeUrl() {
       console.log(`https://www.baidu.com/s`)
-      return this.iconSwitch
-        ? '#'
-        : `https://www.baidu.com/s`
-    }
+      return this.iconSwitch ? '#' : `https://www.baidu.com/s`
+    },
   },
   methods: {
     // 更改搜索引擎
@@ -67,9 +71,10 @@ export default {
           sonData.unshift(sonData.splice(i, 1)[0])
         }
       }
-    }
+    },
   },
-  mounted() {}
+  mounted() {
+  },
 }
 </script>
 
@@ -126,5 +131,4 @@ export default {
   color: #424242;
   font-size: 14px;
 }
-
 </style>

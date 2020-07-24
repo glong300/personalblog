@@ -18,6 +18,8 @@
 
 <script>
 import ArchiveData from 'assets/data/archiveData'
+import appUtil from './../../network/request'
+
 export default {
   name: 'ArchiveCont',
   data() {
@@ -26,11 +28,6 @@ export default {
     }
   },
   computed: {
-    // LinkClick() {
-    //   console.log(this.$route.query)
-    //   return function(item) {
-    //     return
-    //   }
     // }
   },
   mounted() {
@@ -38,17 +35,16 @@ export default {
   },
   methods: {
     getArchiveData() {
-      this.blogsData = ArchiveData.archiveData
-      // let _this = this
-      // this.axios
-      //   .get('/api/archiveData.json')
-      //   .then(function(response) {
-      //     console.log(response)
-      //     _this.blogsData = response.data.archiveData
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error)
-      //   })
+      appUtil.request({
+        url: 'getArchiveData',
+        methods: 'GET'
+      })
+      .then(res => {
+        console.log(res)
+        if (res.resCode == 1) {
+          this.blogsData = res.data
+        }
+      })
     }
   }
 }

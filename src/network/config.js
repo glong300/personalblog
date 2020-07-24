@@ -6,7 +6,7 @@
 module.exports = {
   reqType: 'test',
   test: {
-    testUrl: 'https://ftwx.yiekj.com/caf-ss-api/',
+    testUrl: '127.0.0.1:3000/',
     testImgPath: ''
   },
   onLine: {
