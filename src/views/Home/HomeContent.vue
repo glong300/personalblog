@@ -4,13 +4,13 @@
       <div class="container-content">
         <div v-for="(item, index) in articleData" :key="index" class="cont-card">
           <a :href="item.link">
-            <div class="content-txt">{{item.context}}</div>
+            <div class="content-txt">{{item.HomeContext}}</div>
             <h2 class="h2">
               <font color="#EE0000" v-show="index==0">[置顶]</font>
               {{item.title}}
             </h2>
           </a>
-          <p class="post-meta">更新时间：{{item.date}}</p>
+          <p class="post-meta">{{item.update}}</p>
         </div>
       </div>
       <div class="container-label"></div>
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import appUtli from '../../network/request'
-
+import homeData from 'assets/data/homeData'
+import appUtil from '../../network/request'
 export default {
   name: 'HomeContent',
   data() {
     return {
-      articleData: [], // 文章数据
+      articleData: [] // 文章数据
     }
   },
   mounted() {
@@ -33,22 +33,10 @@ export default {
   },
   methods: {
     getTopppingData() {
+      this.articleData = homeData.toppingData
       this.$emit('articleData', this.articleData)
-    },
-  },
-  mounted() {
-    appUtli
-      .request({
-        url: 'getRecommendationData',
-        method: 'GET',
-      })
-      .then((res) => {
-        console.log(res)
-        if (res.resCode == 1) {
-          this.articleData = res.data
-        }
-      })
-  },
+    }
+  }
 }
 </script>
 
@@ -150,5 +138,6 @@ export default {
   .container-content .cont-card a {
     width: 100%;
   }
+  
 }
 </style>

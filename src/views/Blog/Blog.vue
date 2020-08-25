@@ -1,14 +1,14 @@
 <template>
   <div class="blog">
     <ContentTitle>
-      <template v-slot:h1slot>
+      <template v-slot:tag>
         <h1 class="tag">
           <i>JavaScript</i>
         </h1>
       </template>
       <template v-slot:h1slot>
         <h1 class="cont-title">
-          <i>我的书单</i>
+          <i>{{BlogTitle}}</i>
         </h1>
       </template>
     </ContentTitle>
@@ -45,21 +45,20 @@ context.keys().forEach(file => {
   moduleStore[fileName] = {
     ...fileModule
   }
-  console.log(moduleStore)
 })
 
 export default {
   name: 'Blog',
   data() {
     return {
-      code: ''
+      BlogTitle: this.$route.params.title
     }
   },
   components: moduleStore,
   computed: {
     componentName() {
       let arr = []
-      console.log(this.$route.params.id)
+      console.log(this.$route)
       this.$route.params.id
         .split('-')
         .forEach(item => {

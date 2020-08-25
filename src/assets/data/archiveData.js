@@ -1,12 +1,6 @@
 export default {
   archiveData: [
     {
-      archiveDate: '2020-7-14',
-      archiveTitle: '简历',
-      link: 'my-resume',
-      archiveContext: '简历'
-    },
-    {
       archiveDate: '2020-6-15',
       archiveTitle: '原型继承',
       link: 'prototype-inheritance',

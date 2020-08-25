@@ -19,7 +19,6 @@
 <script>
 import ContentTitle from './../../components/Content/ContentTitle'
 import BookList from './BookList'
-import appUtli from './../../network/request'
 
 export default {
   name: 'MyBookList',
@@ -34,7 +33,16 @@ export default {
     BookList
   },
   mounted() {
-    let _this = this
+    // let _this = this
+    // this.axios
+    //   .get('/data/a.md')
+    //   .then(function(res) {
+    //     _this.bookList = res.data
+    //     console.log(res)
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error)
+    //   })
   }
 }
 </script>

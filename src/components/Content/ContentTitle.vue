@@ -38,20 +38,24 @@ export default {
   justify-content: center;
 }
 
-.warpper .warpper-img .tags {
-  width: 100%;
-  height: 30px;
+.warpper .warpper-img .tag {
+  max-width: 80px;
+  height: 20px;
   display: flex;
   justify-content: flex-start;
-}
-
-.warpper .warpper-img .tags .tag {
+  align-items: center;
   padding: 5px 10px;
   border: 1px solid #fff;
   border-radius: 30px;
   font-size: 12px;
   color: #fff;
   text-decoration: none;
+  position: relative;
+  top: 30px;
+}
+
+.warpper .warpper-img .tag i {
+  width: 100%;
 }
 
 .warpper .warpper-img h1 {
