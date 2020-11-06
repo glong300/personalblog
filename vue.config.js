@@ -33,8 +33,8 @@ module.exports = {
   devServer: {
     // proxy: 'http: localhost:8080',
     open: true,
-    // host: 'localhost',
-    // port: '8080',
+    host: 'localhost',
+    port: '3000',
     // hotOnly: false,
     proxy: {
       '/api': {

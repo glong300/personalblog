@@ -12,9 +12,6 @@
           </div>
         </form>
       </template>
-      <!-- <template  v-slot:spanslot>
-        <span>我是 首页 的副展位</span>
-      </template>-->
     </ContentTitle>
     <HomeContent @articleData="articleDatas" />
   </div>

@@ -5,9 +5,9 @@
     </div>
     <div id="app-content">
       <router-view />
-    </div>
-    <div id="app-footer" v-show="switchCom">
-      <Footer />
+      <div id="app-footer" v-show="switchCom">
+        <Footer />
+      </div>
     </div>
   </div>
 </template>
@@ -24,15 +24,15 @@ export default {
   },
   components: {
     NavBar,
-    Footer
+    Footer,
   },
   computed: {
     ...mapState({
-      switchCom: state => state.switchCom
-    })
+      switchCom: (state) => state.switchCom,
+    }),
   },
   methods: {},
-  mounted() {}
+  mounted() {},
 }
 </script>
 
@@ -43,22 +43,27 @@ export default {
   color: #fff;
   overflow: hidden;
   background-color: #303030;
+  display: flex;
 }
 
 #app-header {
-  width: 100%;
-  height: 65px;
+  width: 256px;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #303030;
-  z-index: 99;
   text-align: center;
+  box-shadow: 2px 0 6px #303030;
 }
 #app-content {
-  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(100% - 256px);
   min-height: calc(100vh - 10vh);
   background-color: #fff;
+  overflow-y: scroll;
 }
 #app-footer {
   width: 100%;

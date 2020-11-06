@@ -12,6 +12,8 @@
     "core-js": "^3.6.4",
     "github-markdown-css": "^4.0.0",
     "highlight.js": "^10.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
     "postcss-cssnext": "^3.1.0",
     "postcss-nested": "^4.2.3",
     "saladcss-bem": "0.0.2",
