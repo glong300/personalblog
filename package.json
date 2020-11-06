@@ -17,6 +17,7 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-nested": "^4.2.3",
     "saladcss-bem": "0.0.2",
+    "view-design": "^4.4.0",
     "vue": "^2.6.11",
     "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.1.6",

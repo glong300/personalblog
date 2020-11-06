@@ -1,29 +1,28 @@
 <template>
   <div id="nav">
     <div class="nav-a">
-      <!-- <img src="./../../assets/logo.png" alt @click="backHome" /> -->
       <a href="/" class="nav-title" alt>Long</a>
       <div class="nav-link">
-        <router-link :to="{ name: 'Home' }">
+        <a href="#JavaScript">
           <i class="link-icon"></i>
           JavaScript
-        </router-link>
-        <router-link :to="{ name: 'Archive' }">
+        </a>
+        <a href="#CSS">
           <i class="link-icon"></i>
           CSS
-        </router-link>
-        <router-link :to="{ name: 'Icon' }">
+        </a>
+        <a href="#Interview">
           <i class="link-icon"></i>
           前端面试
-        </router-link>
-        <router-link :to="{ name: 'MyBookList' }">
+        </a>
+        <a href="#">
           <i class="link-icon"></i>
           我的书单
-        </router-link>
-        <router-link :to="{ name: 'About' }">
+        </a>
+        <a href="#">
           <i class="link-icon"></i>
           关于我
-        </router-link>
+        </a>
       </div>
       <div class="nav-mobile">
         <img src alt class="mobile-img" @click="showNav" />
@@ -119,12 +118,15 @@ export default {
     align-items: center;
 
     .nav-title {
+      width: 100%;
+      height: 60px;
       cursor: pointer;
       font-size: 28px;
       text-decoration: none;
       color: rgb(202, 202, 202);
       font-style: oblique;
       margin-top: 20px;
+      line-height: 60px;
     }
     .nav-link {
       width: 90%;
@@ -142,7 +144,8 @@ export default {
         text-decoration: none;
         display: flex;
         align-items: center;
-        font-size: 12px;
+        font-size: 14px;
+        font-weight: normal;
 
         .link-icon {
           width: 20px;

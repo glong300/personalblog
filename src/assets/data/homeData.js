@@ -14,7 +14,7 @@ export default {
     },
     {
       title: '现代 JavaScript 教程',
-      link: 'https://github.com/javascript-tutorial/zh.javascript.info',
+      link: 'https://zh.javascript.info',
       HomeContext:
         '以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识，当前项目已被翻译为多语言。',
       identification: 'Top',

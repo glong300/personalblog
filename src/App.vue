@@ -4,9 +4,9 @@
       <NavBar />
     </div>
     <div id="app-content">
-      <router-view />
+      <Home />
       <div id="app-footer" v-show="switchCom">
-        <Footer />
+        <!-- <Footer /> -->
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@
 import { mapState } from 'vuex'
 import NavBar from './components/NavBar/NavBar.vue'
 import Footer from './components/Footer/Footer.vue'
+import Home from '@/views/Home/Home.vue'
 
 export default {
   name: 'App',
@@ -25,6 +26,7 @@ export default {
   components: {
     NavBar,
     Footer,
+    Home
   },
   computed: {
     ...mapState({

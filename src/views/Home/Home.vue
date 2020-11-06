@@ -8,42 +8,52 @@
               <i class="icon-search" v-if="iconSwitch"></i>
               <i class="icon-search-baidu" v-else></i>
             </div>
-            <input type="text" name="wd" class="search" v-model="msgInput" placeholder="点击图标可切换搜索引擎" />
+            <input
+              type="text"
+              name="wd"
+              class="search"
+              v-model="msgInput"
+              placeholder="点击图标可切换搜索引擎"
+            />
           </div>
         </form>
       </template>
     </ContentTitle>
-    <HomeContent @articleData="articleDatas" />
+    <JavaScript @articleData="articleDatas" />
+    <Patterns />
+    <Interview />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import ContentTitle from '@/components/Content/ContentTitle'
-import HomeContent from './HomeContent.vue'
+import JavaScript from './JavaScript/JavaScript'
+import Patterns from './Patterns/Patterns'
+import Interview from './Interview/Interview'
 
 export default {
   name: 'Home',
   // 定义组件
   components: {
     ContentTitle,
-    HomeContent
+    JavaScript,
+    Patterns,
+    Interview,
   },
   data() {
     return {
       msgInput: '',
       sonData: [],
-      iconSwitch: true
+      iconSwitch: true,
     }
   },
   // 计算属性
   computed: {
     activeUrl() {
       console.log(`https://www.baidu.com/s`)
-      return this.iconSwitch
-        ? '#'
-        : `https://www.baidu.com/s`
-    }
+      return this.iconSwitch ? '#' : `https://www.baidu.com/s`
+    },
   },
   methods: {
     // 更改搜索引擎
@@ -64,13 +74,20 @@ export default {
           sonData.unshift(sonData.splice(i, 1)[0])
         }
       }
-    }
+    },
   },
-  mounted() {}
+  mounted() {
+    document.title = '前端导航 - 个人'
+  },
 }
 </script>
 
 <style>
+.home {
+  width: 100%;
+  /* overflow: hidden; */
+  /* transition: all 0.3s ease; */
+}
 .header {
   max-width: 600px;
   height: 45px;
@@ -123,5 +140,4 @@ export default {
   color: #424242;
   font-size: 14px;
 }
-
 </style>
